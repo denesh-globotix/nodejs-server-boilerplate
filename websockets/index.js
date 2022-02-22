@@ -25,6 +25,7 @@ export default async (expressServer) => {
 
       websocketConnection.on("message", (message) => {
         console.log(typeof(message))
+        console.log(`the message is: ${message}`)
         const parsedMessage = JSON.parse(message);
         console.log(parsedMessage);
         websocketConnection.send(JSON.stringify({ message: (message) }));
