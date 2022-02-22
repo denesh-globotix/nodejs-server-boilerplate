@@ -21,7 +21,7 @@ export default async (expressServer) => {
 
       // NOTE: connectParams are not used here but good to understand how to get
       // to them if you need to pass data with the connection to identify it (e.g., a userId).
-      console.log(connectionParams);
+      console.log(`These are the connection parameters: ${connectionParams}`);
 
       websocketConnection.on("message", (message) => {
         console.log(typeof(message))
